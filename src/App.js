@@ -1,26 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import HomeGrid from './components/HomeGrid';
+import NavBar from './components/NavBar';
+import { makeStyles } from '@material-ui/core/styles';
+import StickyFooter from './components/footer';
+
+
+const classes = {
+  root: {
+    height: '100vh',
+    flexDirection: "column",
+    display:'flex'
+  }
+}
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return (<div className={classes.root}><center><NavBar/><HomeGrid /></center><StickyFooter /></div>);
 }
 
 export default App;
