@@ -1,6 +1,6 @@
 import React from 'react';
 import {Switch, Route, Redirect, useRouteMatch} from 'react-router-dom';
-import TheoryGrid from './TheoryGrid';
+import TheoryArticle from './TheoryArticle';
 import HomeGrid from './HomeGrid';
 import {makeStyles} from "@material-ui/core";
 
@@ -20,13 +20,13 @@ export default function Theory(props) {
     <div className={classes.roor}> 
       <Switch>
         <Route path={`/theory/Chords`}>
-          <HomeGrid />
+          <TheoryArticle />
         </Route>
         <Route path={`/theory/Intervals`}>
-          <TheoryGrid />
+          <TheoryArticle />
         </Route>
         <Route path={`/theory/Progressions`}>
-          <TheoryGrid />
+          <TheoryArticle />
         </Route>
         <Redirect to="/home" />
       </Switch>

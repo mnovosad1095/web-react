@@ -24,7 +24,7 @@ function App() {
       <center><NavBar/></center>
       <Switch>
         <Route path="/home">
-        <center><HomeGrid /></center>
+          <center><HomeGrid /></center>
         </Route>
         <Route path="/playground">
           <PlayGround />
@@ -34,7 +34,7 @@ function App() {
         </Route>
         <Redirect to="/home" />
       </Switch>
-    <StickyFooter />
+    <StickyFooter /> //TODO: Fix the footer
   </div>
   );
 }

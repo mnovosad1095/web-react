@@ -40,13 +40,19 @@
 body {
   background-image: url("img/guitar_wallp1.jpg");
   background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 90px;
 }
 
 footer {
-  position:absolute;
+  clear: both;
+  position: absolute;
   background-color: rgba(0,0,0,0.6);
-  left:0;
+  width: 95%;
+  /* left:0; */
   bottom:0;
-  right:0;
+  /* right:0; */
   opacity: 1;
 }
