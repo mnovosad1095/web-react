@@ -1,6 +1,8 @@
 import React from 'react';
-import {Typography, Grid, makeStyles} from '@material-ui/core';
-import {Link, NavLink} from 'react-router-dom';
+import Grid from '@material-ui/core/Grid';
+import { makeStyles } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
+import Link from '@material-ui/core/Link';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -11,27 +13,17 @@ const useStyles = makeStyles((theme) => ({
     },
 
     text: {
-        color:theme.palette.grey[200],
-        'text-decoration': 'none',
-        opacity:0.8
-    },
-    activeText: {
-      color:theme.palette.grey[100],
-        'text-decoration': 'none',
-        opacity:1
+        color:theme.palette.grey[800]
     }
+    
+    
 }));
 
-
-function navButton(text,to, classes) {
+function navButton(text, classes) {
     return (
     <Grid item xs={3} lg={2}>
-        <Typography component="h2" variant="h4">
-            <NavLink 
-            to={to} 
-            activeClassName={classes.activeText}
-            className={classes.text} 
-            >{text}</NavLink>
+        <Typography className={classes.text}  component="h2" variant="h4">
+            <Link underline="none" href="#" color="inherit">{text}</Link>
         </Typography>
     </Grid>
     )
@@ -43,8 +35,8 @@ export default function NavBar() {
     return (
         <div className={classes.root}>
             <Grid container spacing={24} justify="center">
-                {navButton("Home", "/home", classes)}
-                {navButton("Playground", "/playground", classes)}
+                {navButton("Home", classes)}
+                {navButton("Playground", classes)}
             </Grid>
         </div>
     );
