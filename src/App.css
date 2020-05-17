@@ -46,6 +46,16 @@ body {
   padding-bottom: 90px;
 }
 
+ul{
+  display: inline-block;
+  list-style-type: none;
+
+}
+
+li {
+  display: block;
+}
+
 footer {
   clear: both;
   position: absolute;

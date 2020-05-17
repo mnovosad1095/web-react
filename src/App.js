@@ -29,7 +29,7 @@ function App() {
         <Route path="/playground">
           <PlayGround />
         </Route>
-        <Route paht="/theory">
+        <Route path="/theory">
           <Theory />
         </Route>
         <Redirect to="/home" />
