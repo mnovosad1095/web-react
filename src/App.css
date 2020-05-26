@@ -38,13 +38,31 @@
 }
 
 body {
-  background: linear-gradient(to right, #4ac29a, #bdfff3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-image: url("img/guitar_wallp1.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 90px;
 }
 
+ul{
+  display: inline-block;
+  list-style-type: none;
+
+}
+
+li {
+  display: block;
+}
 
 footer {
-  position:absolute;
-left:0;
-bottom:0;
-right:0;
+  clear: both;
+  position: absolute;
+  background-color: rgba(0,0,0,0.6);
+  width: 95%;
+  /* left:0; */
+  bottom:0;
+  /* right:0; */
+  opacity: 1;
 }
