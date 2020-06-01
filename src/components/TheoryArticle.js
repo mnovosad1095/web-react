@@ -1,14 +1,12 @@
 import React from 'react';
-import {GridList, GridListTile, Card, Typography, CardContent, Grid} from '@material-ui/core';
+import {Typography, Grid} from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-
+import  ChordArrayHandler  from '../data_handlers/ChordArrayHandler';
+import Chord from "./Chord"
+import ChordArray from './ChordArray'
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    // display: 'flex',
-    // flexWrap: 'wrap',
-    // justifyContent: 'space-around',
-    // overflow: 'hidden',
     paddingTop: "50px",
     paddingLeft: "7%",
     paddingRight: "7%"
@@ -65,7 +63,7 @@ export default function TheoryArticle() {
     <div className={classes.root}>
       {ArticleMainHeader(classes, "This is the main header")}
       <Grid container spacing={7}>
-        <Grid item xs={5}></Grid>
+        <Grid item xs={5}><ChordArrayHandler chords={[{name:"C4", playing:true},{name:"C4", playing:false}]} /></Grid>
         <Grid item xs={7}>{Article(classes,"Another Header1", text)},</Grid>
         <Grid item xs={7}>{Article(classes,"Another Header2", text, )}</Grid>
         <Grid item xs={5}></Grid>
